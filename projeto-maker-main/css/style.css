@@ -1,0 +1,455 @@
+@charset "UTF-8";
+
+ /*Configurações gerais de estilização*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'poppins', sans-serif;
+  
+}
+/*Corpo do site*/
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #1B1C19;
+}
+/*Config geral para cabeça do site*/
+header{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background:#0F1313;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*Transição do texto logo*/
+header h1{
+    transition: all 0.3s;
+}
+/*Logo*/
+.logo{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 4%;
+    width: 20%;
+}
+
+/*Tamanho da logo*/
+.logo .fa-laptop-code{
+    font-size: 35px;
+}
+/*distancia entre logo e texto logo*/
+.logo h1{
+    margin-left: 5% ;
+}
+/*Geral barra de pesquisa do site */
+.navbar{
+    position: relative;
+    width: 70%;
+    padding: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.busca{
+    position: relative;
+    width: 70%;
+}
+/*Configuração input de texto*/
+.busca input{
+    width: 80%;
+    height: 28px;
+    border: none;
+    border-radius: 20px;
+    padding: 1%;
+    text-indent: 10px;
+    font-size: 18px;
+}
+
+#buscaIcon{
+    position: relative;
+    left: -40px;
+    bottom: -5px;
+    top: 4px;
+    z-index: 221;
+    font-size:25px;
+    cursor: pointer;
+    color: rgb(77,77,77);
+    
+}
+/*Configurações ancora de login e saida do site*/
+ul {
+    width: 27%;
+}
+
+ul li{
+    display: inline-block;
+    margin-left: 4%;
+    cursor: pointer;
+}
+
+ul li i{
+    display: block;
+    font-size: 22px
+
+}
+
+ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 2px;
+
+}
+
+/*Barra de navegação lateral do site*/
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 240px;
+    height: 100vh;
+    padding: 120px 10px 30px 10px;
+    transition: all 0.34s;
+    
+}
+
+.sidebar a{
+    height: 60px;
+    background: transparent;
+    border: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    
+}
+
+.sidebar a > span{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    padding: 0px 16px 0px 12px;
+    border-radius: 24px;
+    line-height: 1;
+    transition: all 0.2s;
+    
+    
+}
+
+.sidebar a:hover > span{
+    background-color: rgba(255,255,255, 0.08);
+}
+
+.sidebar a i {
+    position: relative;
+    font-size: 32px;
+    transition: 0.2s;
+}
+
+.sidebar a span{
+    font-size: 22px;
+}
+
+.sidebar > nav{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/*Botão para o menu dos dispositivos moveis*/
+.button-mobile{
+    display: none;
+    align-self: flex-start;
+    align-items: center;
+    margin: 16px;
+    background: transparent;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+.button-mobile span{
+    font-size: 22px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.button-close span i{
+    font-size: 42px;
+    
+
+}
+
+.menu-mobile{
+    display: none;
+}
+
+#menu-mobile a {
+    text-decoration: none ;
+    color: white;
+    font-size: 1.9em;
+    margin-top: 2vh;
+}
+
+.menu-mobile-active{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: 99;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25vh;
+    overflow: hidden;
+}
+
+.menu-mobile-active button{
+    background: transparent;
+    border: 0;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.menu-mobile-active button > span{
+    display: inline-flex;
+    align-items: center;
+}
+
+.mobile-text{
+    font-size: 22px;
+    margin-left: 8px;
+}
+
+/*Configurações da tela principal(texto, perfile posts)*/
+main{
+    margin: auto;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    
+}
+
+main h1{
+    color: white;
+    padding-bottom: 20px;
+}
+
+.post {
+    width: 40%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    color: black;
+    margin: 0 auto; /* Isso centraliza o elemento horizontalmente */
+    
+}
+.user-profile img{
+    width: 55px;
+    margin-right: 10px;
+    
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile p {
+    margin-bottom: 10px;
+    font-size: 16px; /* Tamanho da fonte do nome de usuário */
+}
+
+#imagem-perfil{
+    border-radius: 50%;
+    
+
+}
+
+
+
+.post {
+    margin-bottom: 5px;
+}
+.post-txt{
+    width: 100%;
+    padding-left: 60px;
+}
+
+.post-txt textarea{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.336);
+    background: transparent;
+    resize: none;
+}
+
+.example-post {
+    margin-top: 5px; /* Adicione a margem inferior desejada */
+
+}
+
+.example-post .user-profile p{
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.post-txt{
+    word-wrap: break-word;
+    padding-left: 60px;
+    width: 90%;
+}
+
+.post-txt{
+    font-size: 18px;
+}
+
+/* Estilo para o novo post */
+
+
+
+
+.txt-post{
+    padding-top: 10px;
+    margin-left: 55px;
+    font-size: 1.3em;
+
+}
+
+
+.add-links input[type="button"]{
+    background-color: #000;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;   
+    margin-left: 75%;
+    margin-top: 5px;
+}
+
+.add-links input[type="button"]:hover{
+    background-color: #1b1c19d5;
+}
+
+/* Estilo para a seção de comentários */
+.comments {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Título "Comentários" */
+.comments h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Lista de comentários */
+.comment-list {
+    max-height: 150px; /* Define uma altura máxima para a lista de comentários, com uma barra de rolagem quando necessário */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se a lista de comentários exceder a altura máxima */
+}
+
+/* Estilo dos comentários individuais */
+.comment {
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Campo de entrada de comentário e botão "Comentar" */
+.comment-input {
+    margin-top: 10px;
+}
+
+.comment-input input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comment-input button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-input button:hover {
+    background-color: #1b1c19d5;
+}
+
+/* Estilo do botão de curtir */
+.like-button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo para o botão de curtir quando já foi curtido */
+.like-button.liked {
+    background-color: green;
+    color: #fff;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #0F1313;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.highlighted {
+    background-color: yellow;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Adicione este estilo ao seu arquivo CSS */
+.user-info {
+    margin-bottom: 10px; /* Ajuste o valor conforme necessário */
+    font-size: 1.3em;
+}
+
+.post-text {
+    margin: 20px;/* Outros estilos para o conteúdo da postagem */
+    font-size:18px;
+}
+
